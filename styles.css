@@ -1,0 +1,152 @@
+@import url(./assets/styles/fonts.css);
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+:root {
+    --main-blue: #0084ff;
+    --main-background: #f3f3f3;
+    --main-font: iransans, serif;
+    --font-size: 15px;
+    --nav-font: BYekan, serif;
+    --nav-width: 260px;
+    --main-black: #000;
+    --main-white: #fff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: var(--main-font);
+    font-size: var(--font-size);
+    color: var(--main-black);
+    background-color: var(--main-background);
+}
+
+.main-layout {
+    display: flex;
+}
+
+.nav {
+    height: 100vh;
+    width: var(--nav-width);
+    background: linear-gradient(180deg, #324467, #283142);
+    color: var(--main-white);
+    padding: 1.5rem 0.75em;
+    border-radius: 100px 0 0 0;
+    font-size: 16px;
+    position: sticky;
+    display: flex;
+    flex-direction: column;
+    top: 0;
+    right: 0;
+
+}
+
+.nav__logo,
+.app-version {
+    width: 100%;
+    font-family: poppins, serif;
+}
+
+.nav__logo {
+    text-transform: uppercase;
+    letter-spacing: 0.15rem;
+    font-size: 40px;
+    margin: .8em 0;
+    text-align: center;
+    font-weight: bold;
+}
+
+.nav__items {
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    ;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    flex-grow: 1;
+    overflow-y: scroll;
+}
+
+.nav__items::-webkit-scrollbar {
+    display: none;
+}
+
+.nav__item-lable {
+    text-overflow: hidden;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.nav li {
+    margin: 1em 0;
+    list-style: none;
+}
+
+.nav__link {
+    text-decoration: none;
+    color: var(--main-white);
+    font-weight: 600;
+    display: flex;
+    padding: 15px;
+    transition: all ease 0.4s;
+    border-radius: 8px;
+}
+
+.nav__link:hover {
+    background-color: var(--main-blue);
+    border-radius: 60px;
+}
+
+.icon-container {
+    cursor: pointer;
+}
+
+.icon-container:not(.sidebar-toggler) {
+    margin-left: .5em;
+}
+
+#app {
+    height: 200vh;
+    padding: 1em;
+}
+
+/* mini sidebar */
+
+.nav,
+.sidebar-toggler,
+.nav__logo {
+    transition: all 0.4s ease;
+}
+
+
+.mini-sidebar {
+    overflow-x: hidden;
+    text-overflow: hidden;
+}
+
+.nav.mini-sidebar .nav__link:hover {
+    background-color: transparent;
+    color: gold;
+}
+
+.nav.mini-sidebar .nav__logo {
+    font-size: 1rem;
+    margin-top: 3em;
+}
+
+.nav.mini-sidebar .app-version__lable {
+    display: none;
+}
+
+.nav.mini-sidebar .sidebar-toggler {
+    margin: 0 auto;
+    transform: rotate(180deg);
+}
+
+.app-version {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.5em;
+}
