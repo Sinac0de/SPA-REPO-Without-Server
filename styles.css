@@ -31,7 +31,7 @@ body {
 }
 
 .nav {
-    height: 100vh;
+    max-height: 100vh;
     width: var(--nav-width);
     background: linear-gradient(180deg, #324467, #283142);
     color: var(--main-white);
